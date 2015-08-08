@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'
+gem 'devise-bootstrap-views'
 
 gem 'haml'
 # See https://github.com/rails/execjs#readme for more supported runtimes
