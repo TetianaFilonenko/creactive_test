@@ -3,17 +3,12 @@
   %head
     %title
       Creactive
-      = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
-      = javascript_include_tag 'application', 'data-turbolinks-track' => true 
-      = csrf_meta_tags 
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    = javascript_include_tag 'https://js.stripe.com/v2/' 
+    = csrf_meta_tags 
   %body
-    %header.navbar.navbar-fixed-top.navbar-inverse
-      %nav.navbar-inner
-        .container
-      %a.brand{:href => "/"} Our First HTML5 haml example
-    #main{:role => "main"}
-      .container
-        .content
-          .row
-            .span12
-              = yield 
+    .container
+      = render 'shared/navigation_bar'
+      .jumbotron  
+        = yield 
