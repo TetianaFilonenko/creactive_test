@@ -8,7 +8,7 @@ set :rails_env, :production
 server '178.62.100.186',
   user: 'deployer',
   roles: %w{web app db},
-  ssh_options: {
-    port: 3333,
-  }
+  # ssh_options: {
+  #   port: 3333,
+  # }
 
