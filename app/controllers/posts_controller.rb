@@ -61,6 +61,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def test_ajax
+    @post = Post.last
+    respond_to do |format|
+      format.js {}
+      format.json { render json: @post }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
