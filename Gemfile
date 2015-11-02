@@ -57,5 +57,12 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers', require: false
   gem 'rubocop', require: false
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-unicorn'
+  gem 'capistrano-rails'
+end
+group :production do
+  gem 'unicorn'
 end
 
